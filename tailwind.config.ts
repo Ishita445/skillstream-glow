@@ -26,10 +26,12 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
+					light: 'hsl(var(--primary-light))',
 					foreground: 'hsl(var(--primary-foreground))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
+					light: 'hsl(var(--secondary-light))',
 					foreground: 'hsl(var(--secondary-foreground))'
 				},
 				destructive: {
@@ -63,6 +65,14 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				}
 			},
+			fontFamily: {
+				'inter': ['Inter', 'sans-serif'],
+			},
+			backgroundImage: {
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-secondary': 'var(--gradient-secondary)',
+				'gradient-hero': 'var(--gradient-hero)'
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
@@ -84,11 +94,47 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'float': {
+					'0%, 100%': { 
+						transform: 'translateY(0) translateX(0) rotate(0deg)' 
+					},
+					'25%': { 
+						transform: 'translateY(-20px) translateX(10px) rotate(1deg)' 
+					},
+					'50%': { 
+						transform: 'translateY(-10px) translateX(-10px) rotate(-1deg)' 
+					},
+					'75%': { 
+						transform: 'translateY(-30px) translateX(5px) rotate(0.5deg)' 
+					}
+				},
+				'pulse-glow': {
+					'0%, 100%': { 
+						boxShadow: '0 0 20px hsl(var(--primary) / 0.3)' 
+					},
+					'50%': { 
+						boxShadow: '0 0 40px hsl(var(--primary) / 0.6)' 
+					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(20px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 6s ease-in-out infinite',
+				'float-delayed': 'float 8s ease-in-out infinite 2s',
+				'pulse-glow': 'pulse-glow 3s ease-in-out infinite',
+				'fade-in': 'fade-in 0.6s ease-out'
 			}
 		}
 	},
