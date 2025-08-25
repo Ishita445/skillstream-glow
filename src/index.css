@@ -48,9 +48,9 @@
 
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
-    --gradient-background: linear-gradient(135deg, hsl(var(--background)), hsl(var(--background-secondary)));
+    --gradient-background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--background-secondary)) 50%, hsl(var(--background)) 100%);
     --gradient-hero: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--background-secondary)) 50%, hsl(var(--background)) 100%);
-    --gradient-blob: linear-gradient(135deg, hsl(var(--primary) / 0.1), hsl(var(--primary-light) / 0.1));
+    --gradient-blob: linear-gradient(135deg, hsl(var(--primary) / 0.08), hsl(var(--primary-light) / 0.05));
 
     /* Shadows */
     --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.1);
@@ -125,7 +125,7 @@
 @layer utilities {
   /* Glass Effect for Cards */
   .glass {
-    background: hsl(var(--card-glass));
+    background: hsl(var(--card));
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid hsl(0 0% 100% / 0.1);
@@ -147,6 +147,7 @@
     color: hsl(var(--primary-foreground));
     transition: var(--transition-bounce);
     box-shadow: var(--shadow-md);
+    border: none;
   }
 
   .btn-hero:hover {
@@ -202,7 +203,7 @@
 
   /* Background Shapes */
   .bg-shape {
-    @apply absolute rounded-full opacity-30 blur-3xl;
+    @apply absolute rounded-full opacity-20 blur-3xl;
   }
 
   .bg-shape-primary {
