@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <a href="#" className="flex items-center text-2xl font-bold font-inter">
             <span className="text-primary">Learn</span>
-            <span className="text-secondary">Flow</span>
+            <span className="text-foreground">Flow</span>
           </a>
           
           <div className="flex flex-wrap items-center gap-8">

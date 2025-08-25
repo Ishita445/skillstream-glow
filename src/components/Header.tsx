@@ -7,7 +7,7 @@ const Header = () => {
         <nav className="flex items-center justify-between">
           <a href="#" className="flex items-center text-2xl font-bold font-inter">
             <span className="text-primary">Learn</span>
-            <span className="text-secondary">Flow</span>
+            <span className="text-foreground">Flow</span>
           </a>
           
           <div className="hidden md:flex items-center space-x-8">
